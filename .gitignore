@@ -1,0 +1,138 @@
+# ======================
+# Python / Flask general
+# ======================
+
+# Compiled / bytecode files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+.env
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+*.db-journal
+
+# Flask instance folder (used for uploads, runtime configs, etc.)
+instance/
+.webassets-cache
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+*.pytest_cache/
+.pytest_cache/
+cover/
+
+# Environment variables and secrets
+.env*
+!.env.example
+.envrc
+.DS_Store
+
+# IDE / editor configs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints
+
+# MyPy / Pyre / Pytype
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+
+# PyInstaller
+# (files created when packaging a Flask app as an executable)
+*.manifest
+*.spec
+
+# OS-specific files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# ============================
+# Docker and Deployment Files
+# ============================
+
+# Docker
+docker-compose.override.yml
+*.pid
+*.seed
+*.pid.lock
+
+# Gunicorn logs and runtime files
+gunicorn.pid
+gunicorn.log
+
+# =====================
+# Frontend (optional)
+# =====================
+# If your Flask app includes an Angular/React/Vue frontend
+node_modules/
+build/
+dist/
+*.log
+
+# =====================
+# Miscellaneous
+# =====================
+# VS Code Python debugging
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+
+# Flask Cache or Celery
+celerybeat-schedule
+celerybeat.pid
