@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Filtros{% endblock %}
+
+{% block content %}
+<h2>Lista de frutas</h2>
+<p>La fecha de hoy es: {{date | today}}</p>
+<ul>
+    {% for fruta in lista | reverse %}
+    <li>{{ fruta | upper }}</li>
+    {% endfor %}
+</ul>
+<p>La palabra repetida es: {{ repeat('Hola Víctor ', 5) }}</p>
+
+{% endblock %}

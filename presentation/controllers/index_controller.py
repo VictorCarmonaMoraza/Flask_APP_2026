@@ -1,6 +1,9 @@
 from flask import Blueprint, render_template
 
 from application.use_cases.index_use_case import IndexUseCase
+from datetime import datetime
+
+from utils.repeat_utils import repeat
 
 index_bp = Blueprint('index', __name__)
 
@@ -26,3 +29,9 @@ def index_plantilla():
 def index_plantilla_lista():
     lista = IndexUseCase().obtener_lista()
     return render_template('index_lista.html', lista=lista)
+
+@index_bp.route('/index_plantilla_lista_filtro', methods=['GET'])
+def index_plantilla_lista_filtro():
+    lista = IndexUseCase().obtener_lista()
+    date = datetime.now()
+    return render_template('index_plantilla_filtro.html', lista=lista, date = date, repeat = repeat)
