@@ -9,3 +9,7 @@ class IndexService:
         elif age ==None:
             return f'<h1>No se han proporcionado la edad para el usuario {name}</h1>'
         return f'<h1>El nombre de la persona es {name} y tiene {age}</h1>'
+
+    def obtener_lista_servicio(self):
+        lista = ['manzana', 'banana', 'cereza', 'durazno']
+        return lista

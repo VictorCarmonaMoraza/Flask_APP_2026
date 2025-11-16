@@ -13,3 +13,8 @@ class IndexUseCase:
     def execute2(self, name, age):
         ##Llamamos al metodo persona del servicio
         return self.index_service.persona(name, age)
+
+    def obtener_lista(self):
+        #LLamamos al metodo obtener_lista del servicio
+        return self.index_service.obtener_lista_servicio()
+

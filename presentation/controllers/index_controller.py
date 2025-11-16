@@ -21,3 +21,8 @@ def index2(name=None,age=None):
 def index_plantilla():
     name ='Victor'
     return render_template('index.html',name =name)
+
+@index_bp.route('/index_plantilla_lista', methods=['GET'])
+def index_plantilla_lista():
+    lista = IndexUseCase().obtener_lista()
+    return render_template('index_lista.html', lista=lista)
