@@ -1,7 +1,11 @@
+import os
+
 from flask import Flask
 from app.config.settings import Settings
 from presentation.controllers.hello_controller import hello_bp
 from presentation.controllers.index_controller import index_bp
+
+
 
 
 # Si luego tienes más blueprints, los registrarás aquí:
@@ -9,7 +13,15 @@ from presentation.controllers.index_controller import index_bp
 
 def create_app():
     """Crea y configura la aplicación Flask (punto de entrada principal)."""
-    app = Flask(__name__)
+
+    # 📁 Definir rutas de templates y static manualmente
+    base_dir = os.path.dirname(__file__)  # Ruta de /app/
+    template_dir = os.path.join(base_dir, '../presentation/templates')
+    static_dir = os.path.join(base_dir, '../presentation/static')
+
+    app = Flask(__name__,
+                template_folder=template_dir,
+                static_folder=static_dir)
 
     # 1️⃣ Cargar configuración
     settings = Settings()

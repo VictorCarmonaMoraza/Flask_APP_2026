@@ -1,4 +1,4 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 from application.use_cases.index_use_case import IndexUseCase
 
@@ -16,3 +16,8 @@ def index():
 def index2(name=None,age=None):
     message = IndexUseCase().execute2(name=name,age=age)
     return message
+
+@index_bp.route('/index_plantilla', methods=['GET'])
+def index_plantilla():
+    name ='Victor'
+    return render_template('index.html',name =name)
