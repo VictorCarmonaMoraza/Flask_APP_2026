@@ -1,6 +1,8 @@
 from flask import Flask
 from app.config.settings import Settings
 from presentation.controllers.hello_controller import hello_bp
+from presentation.controllers.index_controller import index_bp
+
 
 # Si luego tienes más blueprints, los registrarás aquí:
 # from presentation.controllers.user_controller import user_bp
@@ -15,6 +17,7 @@ def create_app():
 
     # 2️⃣ Registrar controladores (rutas HTTP)
     app.register_blueprint(hello_bp)
+    app.register_blueprint(index_bp)
 
     # 3️⃣ Inicializar extensiones (si las usas más adelante)
     # from infrastructure.db.database import db
