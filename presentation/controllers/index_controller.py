@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, url_for
 
 from application.use_cases.index_use_case import IndexUseCase
 from datetime import datetime
@@ -24,6 +24,9 @@ def index2(name=None, age=None):
 
 @index_bp.route('/index_plantilla', methods=['GET'])
 def index_plantilla():
+    print(url_for('index.index'))
+    print(url_for('index.index',name='Victor'))
+    print(url_for('index.index',name='Victor',age=35))
     name = 'Victor'
     return render_template('index.html', name=name)
 

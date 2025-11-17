@@ -5,6 +5,16 @@
     <title>Mi app - {% block title %}{% endblock %}</title>
 </head>
 <body>
+<!-- Este navbar no funciona correctamente -->
+<!--
+<nav>
+    <ul>
+        <li><a href="{{ url_for('index.index') }}">Inicio</a></li>
+        <li><a href="{{ url_for('index.index', name='Victor') }}">Inicio2</a></li>
+        <li><a href="{{ url_for('index.index', name='Victor', age=35) }}">Ver perfil</a></li>
+    </ul>
+</nav>
+-->
 {% block content %}
 <!-- Contenido por defecto -->
 {% endblock %}
