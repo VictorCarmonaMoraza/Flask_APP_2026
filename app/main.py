@@ -2,7 +2,7 @@ import os
 
 from flask import Flask
 from app.config.settings import Settings
-from presentation.controllers.auth import auth_bp
+from presentation.controllers.auth_controller import auth_bp
 from presentation.controllers.hello_controller import hello_bp
 from presentation.controllers.index_controller import index_bp
 from utils.date_utils import today
