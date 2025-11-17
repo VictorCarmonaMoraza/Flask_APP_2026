@@ -1,5 +1,7 @@
 from flask import Blueprint, render_template, request
 
+from domain.models.register import RegisterFormWtf
+
 auth_bp = Blueprint('auth', __name__)
 
 @auth_bp.route('/auth/register', methods=['GET','POST'])
@@ -14,3 +16,13 @@ def auth():
             error ="""El nombre de usuario debe tener entre 4 y 25 caractyres y la contraseña entre 6 y 40 caracteres"""
             return render_template('auth/register.html', error=error)
     return render_template('auth/register.html')
+
+
+@auth_bp.route('/auth/registerWTF', methods=['GET','POST'])
+def authWTF():
+    form_wtf = RegisterFormWtf()
+    if form_wtf.validate_on_submit():
+        name = form_wtf.username.data
+        password = form_wtf.password.data
+        print(f'{name} - {password}')
+    return render_template('auth/register_wtf.html',form=form_wtf)

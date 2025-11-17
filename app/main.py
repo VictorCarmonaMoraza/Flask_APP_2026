@@ -27,6 +27,7 @@ def create_app():
     # 1️⃣ Cargar configuración
     settings = Settings()
     app.config.from_object(settings)
+    app.config.from_mapping(SECRET_KEY='dev')
 
     # 2️⃣ Registrar controladores (rutas HTTP)
     app.register_blueprint(hello_bp)
