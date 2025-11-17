@@ -18,3 +18,7 @@ class IndexUseCase:
         #LLamamos al metodo obtener_lista del servicio
         return self.index_service.obtener_lista_servicio()
 
+    def obtener_diccionario(self, name, age, email):
+        ##Llamamos al metodo persona del servicio
+        return self.index_service.obtner_diccionario_servicio(name, age, email)
+

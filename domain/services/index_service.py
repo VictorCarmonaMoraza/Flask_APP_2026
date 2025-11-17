@@ -4,12 +4,21 @@ class IndexService:
         return '<h1>este es el index service</h1>'
 
     def persona(self, name, age):
-        if name ==None and age ==None:
+        if name == None and age == None:
             return '<h1>No se han proporcionado ni el nombre ni la edad</h1>'
-        elif age ==None:
+        elif age == None:
             return f'<h1>No se han proporcionado la edad para el usuario {name}</h1>'
         return f'<h1>El nombre de la persona es {name} y tiene {age}</h1>'
 
     def obtener_lista_servicio(self):
         lista = ['manzana', 'banana', 'cereza', 'durazno']
         return lista
+
+    def obtner_diccionario_servicio(self, name, age, email):
+        ##Creamos un diccionario con los datos proporcionados
+        diccionario = {
+            'name': name,
+            'age': age,
+            'email': email
+        }
+        return diccionario
